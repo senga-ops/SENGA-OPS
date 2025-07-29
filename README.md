@@ -27,7 +27,7 @@ Make sure the following dependencies are available:
 #### Clone SENGA2 and Checkout Correct Branch
 
 ```bash
-git clone https://github.com/senga-ops/SENGA-OPS.git
+git clone --recurse-submodules https://github.com/senga-ops/SENGA-OPS.git
 cd SENGA-OPS
 ```
 
