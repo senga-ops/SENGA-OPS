@@ -27,11 +27,8 @@ Make sure the following dependencies are available:
 #### Clone SENGA2 and Checkout Correct Branch
 
 ```bash
-mkdir senga_ops
-git clone https://github.com/vishnu-ncl/SENGA2.git
-cd SENGA2
-git checkout OPS/SENGA_1D_H2
-cd ..
+git clone https://github.com/senga-ops/SENGA-OPS.git
+cd SENGA-OPS
 ```
 
 #### Clone OPS and Checkout Correct Branch
