@@ -1,4 +1,4 @@
-# 🔥 SENGA+ 1D Hydrogen Flame Simulation (OPS-Enabled)
+# 🔥 SENGA+OPS
 
 This repository provides instructions to build and run a version of **SENGA+** combined with OPS (Oxford Parallel library for Structured meshes) use Domain Specific Language for reactive flow solvers.
 
