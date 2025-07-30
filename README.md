@@ -95,17 +95,10 @@ Which ```<target>``` can have different options which explained in previouse sec
 
 (Coming soon...)
 
-Here you will describe how to:
-
-- Run the binary
-- Set runtime parameters
-- Use `mpirun` if running in parallel
-- Handle outputs (e.g., HDF5 files)
-
-Example placeholder:
 
 ```bash
-mpirun -np 4 ./senga_exec input_file.inp
+# OPS MPI version
+time srun --distribution=block:block --hint=nomultithread --unbuffered --ntasks-per-node=128 --ntasks=128 ./senga2_mpi -OPS_DIAGS=2 OPS_FORCE_DECOMP_X=8 OPS_FORCE_DECOMP_Y=4 OPS_FORCE_DECOMP_Z=4 2>&1 | tee log_1node_128ranks_gnu_lumi-c_ops.txt
 ```
 
 ---
@@ -114,10 +107,8 @@ mpirun -np 4 ./senga_exec input_file.inp
 
 ```
 .
-├── SENGA2/                 # SENGA+ source code
+├── SENGA/                  # SENGA+ source code
 ├── OPS/                    # OPS backend source
-├── output/                 # Simulation results (after run)
-├── Make.codgen             # Build configuration file
 └── README.md               # This file
 ```
 
