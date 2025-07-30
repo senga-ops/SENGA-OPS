@@ -60,6 +60,16 @@ srun -A <Budget Account>  --nodes=1  --time=01:00:00  --partition=gpu  --gres=gp
 Then you'll need to source the setup environment file from ```SENGA-OPS/OPS/source_files``` in compute nodes.
 After sourcing the setup file, go to the ```SENGA-OPS/OPS/ops/fortran``` and make the fortran OPS.
 
+```
+make <target>
+```
+Which ```<target>``` can have different options like:
+
+> mpi_cuda if cuda fortran available, say: ```make -f Makefile.codegen senga2_mpi_cuda```
+
+> f2c_mpi_cuda if cuda fortran is not available
+
+> f2c_mpi_hip for AMD GPUs
 
 > 💡 You can also build other backends (`cuda`, `openmp`, etc.) depending on your target hardware. 
 
@@ -75,15 +85,7 @@ cd SENGA-OPS/src
  make -f Makefile.codegen senga2_<target>
 ```
 
-Which ```<target>``` can have different options like:
-
-> mpi_cuda if cuda fortran available, say: ```make -f Makefile.codegen senga2_mpi_cuda```
-
-> f2c_mpi_cuda if cuda fortran is not available
-
-> f2c_mpi_hip for AMD GPUs
-
-> ⚠️ **Important:** Ensure `OPS_INSTALL_PATH` in your `Make.codgen` points to the correct OPS location.
+Which ```<target>``` can have different options which explained in previouse section.
 
 ---
 
