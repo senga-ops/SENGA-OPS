@@ -73,6 +73,7 @@ Which ```<target>``` can have different options like:
 
 > 💡 You can also build other backends (`cuda`, `openmp`, etc.) depending on your target hardware. 
 
+When the build is successful, you can see the the build files in the ```SENGA-OPS/OPS/ops/fortran/lib``` path.
 
 ---
 
@@ -82,6 +83,7 @@ Navigate back to the SENGA directory and buikd the source code with the target b
 
 ```bash
 cd SENGA-OPS/src
+./Allmake
  make -f Makefile.codegen senga2_<target>
 ```
 
