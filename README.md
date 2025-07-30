@@ -12,7 +12,6 @@ It uses the following repository for OPS which is already included in the code:
 
 Make sure the following dependencies are available:
 
-- CMake
 - GNU Make
 - MPI compiler (e.g., `mpicc`, `mpif90`)
 - HDF5 development libraries
