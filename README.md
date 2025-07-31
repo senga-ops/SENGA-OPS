@@ -98,6 +98,9 @@ Which ```<target>``` can have different options which explained in previouse sec
 ```bash
 # OPS MPI version
 time srun --distribution=block:block --hint=nomultithread --unbuffered --ntasks-per-node=128 --ntasks=128 ./senga2_mpi -OPS_DIAGS=2 OPS_FORCE_DECOMP_X=8 OPS_FORCE_DECOMP_Y=4 OPS_FORCE_DECOMP_Z=4 2>&1 | tee log_1node_128ranks_gnu_lumi-c_ops.txt
+#OR
+mpirun -np 4  ./laplace2d_f2c_mpi_cuda -OPS_DIAGS=2 OPS_FORCE_DECOMP_X=4 OPS_FORCE_DECOMP_Y=1 OPS_FORCE_DECOMP_Z=1 2>&1 | tee log_1node_128ranks_gnu_lumi-c_ops.txt
+
 ```
 
 ---
