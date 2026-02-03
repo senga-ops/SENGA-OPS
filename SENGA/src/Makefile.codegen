@@ -470,7 +470,7 @@ F2C_MPI_OBJ = \
   $(OPS_GENERATED:.F90=_f2c_mpi.o)
 
 f2c_mpi_openmp/f2c_mpi_openmp_kernels_f2c_mpi.o: f2c_mpi_openmp/f2c_mpi_openmp_kernels.cpp
-	$(MPICPP) $(F2C_CXXFLAGS) $(APP_CXX_FLAGS) -DOPS_FTN -DOPS_MPI $(I_MPI_INC) -I$(C_OPS_INC) -I. -c $< -o $@
+	$(MPICXX) $(F2C_CXXFLAGS) $(APP_CXX_FLAGS) -DOPS_FTN -DOPS_MPI $(I_MPI_INC) -I$(C_OPS_INC) -I. -c $< -o $@
 
 %_f2c_mpi.o: %.F90
 	$(MPIF90) $(FFLAGS) $(APP_FLAGS) $(FMODS) -DOPS_MPI -DOPS_F2C_INTEROP -c $< -o $@
@@ -579,7 +579,7 @@ F2C_MPI_HIP_OBJ = \
   $(OPS_GENERATED:.F90=_f2c_mpi_hip.o)
 
 f2c_hip/f2c_hip_kernels_f2c_mpi_hip.o: f2c_hip/f2c_hip_kernels.cpp
-	$(HIPMPICPP) $(CXXFLAGS_NOOMP) $(F2C_HIPFLAGS) -DOPS_FTN -DOPS_MPI -I$(C_OPS_INC) -I. -DMPICH_IGNORE_CXX_SEEK $(I_MPI_INC) -c $< -o $@
+	$(HIPMPICXX) $(CXXFLAGS_NOOMP) $(F2C_HIPFLAGS) -DOPS_FTN -DOPS_MPI -I$(C_OPS_INC) -I. -DMPICH_IGNORE_CXX_SEEK $(I_MPI_INC) -c $< -o $@
 
 %_f2c_mpi_hip.o: %.F90
 	$(MPIF90) $(FFLAGS) $(APP_FLAGS) $(FMODS_F2C_HIP) -DOPS_MPI -DOPS_F2C_INTEROP -c $< -o $@
